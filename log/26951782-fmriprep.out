@@ -1,0 +1,51 @@
+pixar003 /gpfs/milgram/data/PartlyCloudy/ /gpfs/milgram/scratch60/turk-browne/aa2842/scratch60/derivatives
+You are using fMRIPrep-23.2.1, and a newer version of fMRIPrep is available: 23.2.2.
+Please check out our documentation about how and when to upgrade:
+https://fmriprep.readthedocs.io/en/latest/faq.html#upgrading
+240517-17:12:17,281 nipype.workflow IMPORTANT:
+	 Running fMRIPrep version 23.2.1
+
+         License NOTICE ##################################################
+         fMRIPrep 23.2.1
+         Copyright 2023 The NiPreps Developers.
+         
+         This product includes software developed by
+         the NiPreps Community (https://nipreps.org/).
+         
+         Portions of this software were developed at the Department of
+         Psychology at Stanford University, Stanford, CA, US.
+         
+         This software is also distributed as a Docker container image.
+         The bootstrapping file for the image ("Dockerfile") is licensed
+         under the MIT License.
+         
+         This software may be distributed through an add-on package called
+         "Docker Wrapper" that is under the BSD 3-clause License.
+         #################################################################
+240517-17:13:03,258 nipype.workflow IMPORTANT:
+	 Building fMRIPrep's workflow:
+           * BIDS dataset path: /gpfs/milgram/data/PartlyCloudy.
+           * Participant list: ['pixar003'].
+           * Run identifier: 20240517-170931_61fb99b6-b517-4a3d-af4f-f928ece07d5e.
+           * Output spaces: MNI152Lin:res-native.
+           * Pre-run FreeSurfer's SUBJECTS_DIR: /gpfs/milgram/scratch60/turk-browne/aa2842/scratch60/derivatives/sourcedata/freesurfer.
+240517-17:13:05,887 nipype.workflow INFO:
+	 ANAT Stage 1: Adding template workflow
+240517-17:13:08,645 nipype.workflow INFO:
+	 ANAT Stage 2: Preparing brain extraction workflow
+240517-17:13:08,739 nipype.workflow INFO:
+	 ANAT Stage 3: Preparing segmentation workflow
+240517-17:13:08,744 nipype.workflow INFO:
+	 ANAT Stage 4: Preparing normalization workflow for ['MNI152Lin', 'MNI152NLin2009cAsym']
+240517-17:13:08,752 nipype.workflow INFO:
+	 ANAT Skipping Stages 5+
+240517-17:13:10,962 nipype.workflow INFO:
+	 No single-band-reference found for sub-pixar003_task-pixar_bold.nii.gz.
+240517-17:13:11,34 nipype.workflow INFO:
+	 Stage 1: Adding HMC boldref workflow
+240517-17:13:11,40 nipype.workflow INFO:
+	 Stage 2: Adding motion correction workflow
+240517-17:13:11,48 nipype.workflow INFO:
+	 Stage 3: Adding coregistration boldref workflow
+240517-17:13:13,623 nipype.workflow CRITICAL:
+	 ERROR: a valid license file is required for FreeSurfer to run. fMRIPrep looked for an existing license file at several paths, in this order: 1) command line argument ``--fs-license-file``; 2) ``$FS_LICENSE`` environment variable; and 3) the ``$FREESURFER_HOME/license.txt`` path. Get it (for free) by registering at https://surfer.nmr.mgh.harvard.edu/registration.html

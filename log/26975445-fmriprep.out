@@ -1,0 +1,132 @@
+pixar003 /gpfs/milgram/data/PartlyCloudy/ /gpfs/milgram/scratch60/turk-browne/aa2842/scratch60/derivatives
+You are using fMRIPrep-23.2.1, and a newer version of fMRIPrep is available: 23.2.2.
+Please check out our documentation about how and when to upgrade:
+https://fmriprep.readthedocs.io/en/latest/faq.html#upgrading
+bids-validator@1.14.1
+(node:2229479) Warning: Closing directory handle on garbage collection
+(Use `node --trace-warnings ...` to show where the warning was created)
+	[31m1: [ERR] Files with such naming scheme are not part of BIDS specification. This error is most commonly caused by typos in file names that make them not BIDS compatible. Please consult the specification and make sure your files are named correctly. If this is not a file naming issue (for example when including files not yet covered by the BIDS specification) you should include a ".bidsignore" file in your dataset (see https://github.com/bids-standard/bids-validator#bidsignore for details). Please note that derived (processed) data should be placed in /derivatives folder and source data (such as DICOMS or behavioural logs in proprietary formats) should be placed in the /sourcedata folder. (code: 1 - NOT_INCLUDED)[39m
+		./../../opt/freesurfer/subjects/fsaverage/label/Yeo_Brainmap_fsaverage_README
+			Evidence: Yeo_Brainmap_fsaverage_README
+		./../../opt/freesurfer/subjects/fsaverage/label/lh.BA1_exvivo.label
+			Evidence: lh.BA1_exvivo.label
+		./../../opt/freesurfer/subjects/fsaverage/label/lh.BA1_exvivo.thresh.label
+			Evidence: lh.BA1_exvivo.thresh.label
+		./../../opt/freesurfer/subjects/fsaverage/label/lh.BA2_exvivo.label
+			Evidence: lh.BA2_exvivo.label
+		./../../opt/freesurfer/subjects/fsaverage/label/lh.BA2_exvivo.thresh.label
+			Evidence: lh.BA2_exvivo.thresh.label
+		./../../opt/freesurfer/subjects/fsaverage/label/lh.BA3a_exvivo.label
+			Evidence: lh.BA3a_exvivo.label
+		./../../opt/freesurfer/subjects/fsaverage/label/lh.BA3a_exvivo.thresh.label
+			Evidence: lh.BA3a_exvivo.thresh.label
+		./../../opt/freesurfer/subjects/fsaverage/label/lh.BA3b_exvivo.label
+			Evidence: lh.BA3b_exvivo.label
+		./../../opt/freesurfer/subjects/fsaverage/label/lh.BA3b_exvivo.thresh.label
+			Evidence: lh.BA3b_exvivo.thresh.label
+		./../../opt/freesurfer/subjects/fsaverage/label/lh.BA44_exvivo.label
+			Evidence: lh.BA44_exvivo.label
+		[31m... and 109919 more files having this issue (Use --verbose to see them all).[39m
+
+[36m	Please visit https://neurostars.org/search?q=NOT_INCLUDED for existing conversations about this issue.[39m
+
+	[31m2: [ERR] Task Name contain an Illegal Character hyphen or underscore. Please edit the filename as per BIDS spec. (code: 58 - TASK_NAME_CONTAIN_ILLEGAL_CHARACTER)[39m
+		./preprocessed/fmriprep/sub-pixar001/figures/sub-pixar001_task-pixar_bold_bbr.svg
+			Evidence: task name contains illegal character:/preprocessed/fmriprep/sub-pixar001/figures/sub-pixar001_task-pixar_bold_bbr.svg
+		./preprocessed/fmriprep/sub-pixar001/figures/sub-pixar001_task-pixar_bold_rois.svg
+			Evidence: task name contains illegal character:/preprocessed/fmriprep/sub-pixar001/figures/sub-pixar001_task-pixar_bold_rois.svg
+		./preprocessed/fmriprep/sub-pixar001/func/sub-pixar001_task-pixar_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+			Evidence: task name contains illegal character:/preprocessed/fmriprep/sub-pixar001/func/sub-pixar001_task-pixar_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+		./preprocessed/fmriprep/sub-pixar001/func/sub-pixar001_task-pixar_bold_space-T1w_label-aparcaseg_roi.nii.gz
+			Evidence: task name contains illegal character:/preprocessed/fmriprep/sub-pixar001/func/sub-pixar001_task-pixar_bold_space-T1w_label-aparcaseg_roi.nii.gz
+		./preprocessed/fmriprep/sub-pixar001/func/sub-pixar001_task-pixar_bold_space-fsaverage5.L.func.gii
+			Evidence: task name contains illegal character:/preprocessed/fmriprep/sub-pixar001/func/sub-pixar001_task-pixar_bold_space-fsaverage5.L.func.gii
+		./preprocessed/fmriprep/sub-pixar002/figures/sub-pixar002_task-pixar_bold_bbr.svg
+			Evidence: task name contains illegal character:/preprocessed/fmriprep/sub-pixar002/figures/sub-pixar002_task-pixar_bold_bbr.svg
+		./preprocessed/fmriprep/sub-pixar002/figures/sub-pixar002_task-pixar_bold_rois.svg
+			Evidence: task name contains illegal character:/preprocessed/fmriprep/sub-pixar002/figures/sub-pixar002_task-pixar_bold_rois.svg
+		./preprocessed/fmriprep/sub-pixar002/func/sub-pixar002_task-pixar_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+			Evidence: task name contains illegal character:/preprocessed/fmriprep/sub-pixar002/func/sub-pixar002_task-pixar_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+		./preprocessed/fmriprep/sub-pixar002/func/sub-pixar002_task-pixar_bold_space-T1w_label-aparcaseg_roi.nii.gz
+			Evidence: task name contains illegal character:/preprocessed/fmriprep/sub-pixar002/func/sub-pixar002_task-pixar_bold_space-T1w_label-aparcaseg_roi.nii.gz
+		./preprocessed/fmriprep/sub-pixar002/func/sub-pixar002_task-pixar_bold_space-fsaverage5.L.func.gii
+			Evidence: task name contains illegal character:/preprocessed/fmriprep/sub-pixar002/func/sub-pixar002_task-pixar_bold_space-fsaverage5.L.func.gii
+		[31m... and 1537 more files having this issue (Use --verbose to see them all).[39m
+
+[36m	Please visit https://neurostars.org/search?q=TASK_NAME_CONTAIN_ILLEGAL_CHARACTER for existing conversations about this issue.[39m
+
+	[31m3: [ERR] Sub label contain an Illegal Character hyphen or underscore. Please edit the filename as per BIDS spec. (code: 62 - SUBJECT_VALUE_CONTAINS_ILLEGAL_CHARACTER)[39m
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_brainmask.nii.gz
+			Evidence: sub name contains illegal character:/preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_brainmask.nii.gz
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_class-GM_probtissue.nii.gz
+			Evidence: sub name contains illegal character:/preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_class-GM_probtissue.nii.gz
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_dtissue.nii.gz
+			Evidence: sub name contains illegal character:/preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_dtissue.nii.gz
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_inflated.R.surf.gii
+			Evidence: sub name contains illegal character:/preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_inflated.R.surf.gii
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_label-aseg_roi.nii.gz
+			Evidence: sub name contains illegal character:/preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_label-aseg_roi.nii.gz
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_midthickness.R.surf.gii
+			Evidence: sub name contains illegal character:/preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_midthickness.R.surf.gii
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_pial.R.surf.gii
+			Evidence: sub name contains illegal character:/preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_pial.R.surf.gii
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_smoothwm.L.surf.gii
+			Evidence: sub name contains illegal character:/preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_smoothwm.L.surf.gii
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_space-MNI152NLin2009cAsym_brainmask.nii.gz
+			Evidence: sub name contains illegal character:/preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_space-MNI152NLin2009cAsym_brainmask.nii.gz
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz
+			Evidence: sub name contains illegal character:/preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz
+		[31m... and 4636 more files having this issue (Use --verbose to see them all).[39m
+
+[36m	Please visit https://neurostars.org/search?q=SUBJECT_VALUE_CONTAINS_ILLEGAL_CHARACTER for existing conversations about this issue.[39m
+
+	[31m4: [ERR] Subject label in the filename doesn't match with the path of the file. File seems to be saved in incorrect subject directory. (code: 64 - SUBJECT_LABEL_IN_FILENAME_DOESNOT_MATCH_DIRECTORY)[39m
+		./preprocessed/fmriprep/sub-pixar001.html
+			Evidence: File: /preprocessed/fmriprep/sub-pixar001.html is saved in incorrect subject directory as per sub-id in filename.
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_brainmask.nii.gz
+			Evidence: File: /preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_brainmask.nii.gz is saved in incorrect subject directory as per sub-id in filename.
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_class-CSF_probtissue.nii.gz
+			Evidence: File: /preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_class-CSF_probtissue.nii.gz is saved in incorrect subject directory as per sub-id in filename.
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_class-GM_probtissue.nii.gz
+			Evidence: File: /preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_class-GM_probtissue.nii.gz is saved in incorrect subject directory as per sub-id in filename.
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_class-WM_probtissue.nii.gz
+			Evidence: File: /preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_class-WM_probtissue.nii.gz is saved in incorrect subject directory as per sub-id in filename.
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_dtissue.nii.gz
+			Evidence: File: /preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_dtissue.nii.gz is saved in incorrect subject directory as per sub-id in filename.
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_inflated.L.surf.gii
+			Evidence: File: /preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_inflated.L.surf.gii is saved in incorrect subject directory as per sub-id in filename.
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_inflated.R.surf.gii
+			Evidence: File: /preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_inflated.R.surf.gii is saved in incorrect subject directory as per sub-id in filename.
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_label-aparcaseg_roi.nii.gz
+			Evidence: File: /preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_label-aparcaseg_roi.nii.gz is saved in incorrect subject directory as per sub-id in filename.
+		./preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_label-aseg_roi.nii.gz
+			Evidence: File: /preprocessed/fmriprep/sub-pixar001/anat/sub-pixar001_T1w_label-aseg_roi.nii.gz is saved in incorrect subject directory as per sub-id in filename.
+		[31m... and 12378 more files having this issue (Use --verbose to see them all).[39m
+
+[36m	Please visit https://neurostars.org/search?q=SUBJECT_LABEL_IN_FILENAME_DOESNOT_MATCH_DIRECTORY for existing conversations about this issue.[39m
+
+	[31m5: [ERR] Empty files not allowed. (code: 99 - EMPTY_FILE)[39m
+		./../../opt/freesurfer/subjects/fsaverage/xhemi/scripts/patchdir.txt
+		./preprocessed/freesurfer/fsaverage/xhemi/scripts/patchdir.txt
+
+[36m	Please visit https://neurostars.org/search?q=EMPTY_FILE for existing conversations about this issue.[39m
+
+        [34m[4mSummary:[24m[39m                      [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[39m[24m 
+        110555 Files, 205.28GB        pixar                   MRI                   
+        155 - Subjects                                                              
+        1 - Session                                                                 
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+Traceback (most recent call last):
+  File "/opt/conda/envs/fmriprep/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/envs/fmriprep/lib/python3.10/site-packages/fmriprep/cli/run.py", line 40, in main
+    parse_args()
+  File "/opt/conda/envs/fmriprep/lib/python3.10/site-packages/fmriprep/cli/parser.py", line 828, in parse_args
+    validate_input_dir(config.environment.exec_env, opts.bids_dir, opts.participant_label)
+  File "/opt/conda/envs/fmriprep/lib/python3.10/site-packages/fmriprep/utils/bids.py", line 237, in validate_input_dir
+    subprocess.check_call(['bids-validator', str(bids_dir), '-c', temp.name])
+  File "/opt/conda/envs/fmriprep/lib/python3.10/subprocess.py", line 369, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['bids-validator', '/gpfs/milgram/data/PartlyCloudy', '-c', '/tmp/tmp42js6da7.json']' returned non-zero exit status 1.

@@ -1,0 +1,41 @@
+/var/spool/slurmd/job26975495/slurm_script: line 15: cd: /gpfs/milgram/scratch60/turk-browne/aa2842/scratch60/ds000171: No such file or directory
+control01 /gpfs/milgram/scratch60/turk-browne/aa2842/scratch60/ds000171 /gpfs/milgram/scratch60/turk-browne/aa2842/derivatives
+You are using fMRIPrep-23.2.1, and a newer version of fMRIPrep is available: 23.2.2.
+Please check out our documentation about how and when to upgrade:
+https://fmriprep.readthedocs.io/en/latest/faq.html#upgrading
+usage: fmriprep [-h] [--skip_bids_validation]
+                [--participant-label PARTICIPANT_LABEL [PARTICIPANT_LABEL ...]]
+                [-t TASK_ID] [--echo-idx ECHO_IDX] [--bids-filter-file FILE]
+                [-d [PATH ...]] [--bids-database-dir PATH] [--nprocs NPROCS]
+                [--omp-nthreads OMP_NTHREADS] [--mem MEMORY_MB] [--low-mem]
+                [--use-plugin FILE] [--sloppy] [--anat-only]
+                [--level {minimal,resampling,full}] [--boilerplate-only]
+                [--reports-only]
+                [--ignore {fieldmaps,slicetiming,sbref,t2w,flair,fmap-jacobian} [{fieldmaps,slicetiming,sbref,t2w,flair,fmap-jacobian} ...]]
+                [--output-spaces [OUTPUT_SPACES ...]] [--longitudinal]
+                [--bold2t1w-init {register,header}] [--bold2t1w-dof {6,9,12}]
+                [--force-bbr] [--force-no-bbr]
+                [--slice-time-ref SLICE_TIME_REF] [--dummy-scans DUMMY_SCANS]
+                [--random-seed _RANDOM_SEED]
+                [--me-t2s-fit-method {curvefit,loglin}]
+                [--output-layout {bids,legacy}] [--me-output-echos]
+                [--medial-surface-nan] [--project-goodvoxels]
+                [--md-only-boilerplate] [--cifti-output [{91k,170k}]]
+                [--no-msm] [--use-aroma]
+                [--aroma-melodic-dimensionality AROMA_MELODIC_DIM]
+                [--error-on-aroma-warnings] [--return-all-components]
+                [--fd-spike-threshold REGRESSORS_FD_TH]
+                [--dvars-spike-threshold REGRESSORS_DVARS_TH]
+                [--skull-strip-template SKULL_STRIP_TEMPLATE]
+                [--skull-strip-fixed-seed]
+                [--skull-strip-t1w {auto,skip,force}] [--fmap-bspline]
+                [--fmap-no-demean] [--use-syn-sdc [{warn,error}]]
+                [--force-syn] [--fs-license-file FILE]
+                [--fs-subjects-dir PATH] [--no-submm-recon] [--fs-no-reconall]
+                [--track-carbon] [--country-code COUNTRY_CODE] [--version]
+                [-v] [-w WORK_DIR] [--clean-workdir] [--resource-monitor]
+                [--config-file FILE] [--write-graph] [--stop-on-first-crash]
+                [--notrack]
+                [--debug {compcor,fieldmaps,pdb,all} [{compcor,fieldmaps,pdb,all} ...]]
+                bids_dir output_dir {participant}
+fmriprep: error: Path does not exist: </gpfs/milgram/scratch60/turk-browne/aa2842/scratch60/ds000171>.
