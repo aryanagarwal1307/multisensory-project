@@ -22,7 +22,7 @@ module load fmriprep/23.2.1
 ROOT=/gpfs/milgram/scratch60/turk-browne/aa2842/ds000171
 
 export FS_LICENSE=/gpfs/milgram/scratch60/turk-browne/aa2842/project/license.txt
- 
+
 cd $ROOT
 OUT=/gpfs/milgram/scratch60/turk-browne/aa2842/derivatives
 WORK=/gpfs/milgram/scratch60/turk-browne/aa2842/workdir

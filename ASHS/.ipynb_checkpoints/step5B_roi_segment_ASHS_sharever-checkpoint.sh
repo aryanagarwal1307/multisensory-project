@@ -1,28 +1,25 @@
 #!/bin/bash
-#SBATCH --job-name=step5B_ASHS_multimem001-test
+#SBATCH --job-name=step5B_ASHS_stresslearn003
 #SBATCH --ntasks=1 --nodes=1
 #SBATCH --output=logs/step5B_ASHS_segmentation-%j.out
 #SBATCH -p psych_day
 #SBATCH --time=10:00:00
 #SBATCH --mem-per-cpu=25000
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=aryan.agarwal@yale.edu
+#SBATCH --mail-user=irene.zhou@yale.edu
 
-sub="multimem001"
+sub="stresslearn003"
 
-source /gpfs/milgram/project/turk-browne/aa2842/multisensory/ASHS/globals.sh
+source run_scripts/globals.sh
 SUBJ_DIR="$SUBJ_HEAD_DIR/$sub"
-ANAT_DIR="$SUBJ_DIR/anat"
+ANAT_DIR="$SUBJ_DIR/preproc/anat"
 ANALYSIS_DIR="$SUBJ_DIR/preproc/per_run/${sub}_scene1.feat"
 ROI_DIR="$SUBJ_DIR/rois/ASHS"
 HPC_DIR="$ROI_DIR/final"
 FINAL_DIR="$HPC_DIR/func_masks"
 
-T1_PATH="$ANAT_DIR/T1w_acpc_brain.nii.gz"
-T2_PATH="$ANAT_DIR/T2w_acpc_brain.nii.gz"
-
-COMBINED_SEG_LEFT="$HPC_DIR/${sub}_left_lfseg_corr_nogray.nii.gz"
-COMBINED_SEG_RIGHT="$HPC_DIR/${sub}_right_lfseg_corr_nogray.nii.gz"
+T1_PATH="$ANAT_DIR/${sub}_mprage_brain.nii.gz"
+T2_PATH="$ANAT_DIR/${sub}_t2_tse_hipp_brain.nii.gz"
 
 # calculate transformation matrix from T2 to T1 space
 echo "calculating transformation matrix from T2 to T1 space"

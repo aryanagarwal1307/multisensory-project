@@ -1,0 +1,220 @@
+/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/bin/ashs_main.sh -I multimem001 -a /gpfs/milgram/project/turk-browne/projects/stat_episodic/ASHS/ashs_atlas_princeton -g /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T1w_acpc_brain.nii.gz -f /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T2w_acpc_brain.nii.gz -w /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
+ashs_main execution log
+  timestamp:   Fri Jul 12 17:26:16 EDT 2024
+  invocation:  /gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/bin/ashs_main.sh -I multimem001 -a /gpfs/milgram/project/turk-browne/projects/stat_episodic/ASHS/ashs_atlas_princeton -g /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T1w_acpc_brain.nii.gz -f /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T2w_acpc_brain.nii.gz -w /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
+  directory:   /gpfs/milgram/project/turk-browne/aa2842/multisensory/ASHS
+  environment:
+    ASHS_MPRAGE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T1w_acpc_brain.nii.gz
+    ASHS_ROOT=/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta
+    ASHS_SUBJID=multimem001
+    ASHS_TSE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T2w_acpc_brain.nii.gz
+    ASHS_WORK=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
+Atlas    : /gpfs/milgram/pi/turk-browne/projects/stat_episodic/ASHS/ashs_atlas_princeton
+T1 Image : /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T1w_acpc_brain.nii.gz
+T2 Image : /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T2w_acpc_brain.nii.gz
+WorkDir  : /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
+Not using SGE, LSF, SLURM or GNU parallel
+Using  with default options
+****************************************
+Starting stage 1: Normalization to T1 population template
+****************************************
+ options for this stage: 
+[0;36m
+-------------------  INFO  ---------------------
+Started stage 1: Normalization to T1 population 
+template
+------------------------------------------------
+[0m
++ source /gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/bin/ashs_lib.sh
+++ source /gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/bin/ashs_version.sh
++++ ASHS_VERSION_MAJOR=1
++++ ASHS_VERSION_MINOR=0
++++ ASHS_VERSION_PATCH=0
++++ ASHS_VERSION_NOTE=
++++ ASHS_VERSION_FULL=1.0.0
++++ ASHS_VERSION_DATE=20170915
++++ ASHS_OLDEST_COMPAT_DATE=20170810
+++ source /gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/bin/ashs_common_master.sh
++++ [[ ! -n /gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta ]]
+++++ uname
++++ ARCH=Linux
++++ ASHS_BIN=/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin
++++ ASHS_ANTS=/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/ants_1042
++++ ASHS_FSL=/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/fsl
+++++ grep Version
+++++ /gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/c3d -version
++++ [[ ! -n Version 1.1.0 ]]
++++ PATH=/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin:/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/ants_1042:/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/fsl:/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin:/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/ants_1042:/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/fsl:/gpfs/milgram/project/turk-browne/aa2842/conda_envs/myenv/bin:/gpfs/milgram/apps/hpc.rhel7/software/miniconda/23.11.0/condabin:/gpfs/milgram/apps/hpc.rhel7/software/miniconda/23.11.0:/gpfs/milgram/apps/hpc.rhel7/software/miniconda/23.11.0/sbin:/gpfs/milgram/apps/hpc.rhel7/software/miniconda/23.11.0/bin:/gpfs/milgram/apps/bin:/home/aa2842/.local/bin:/home/aa2842/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/dell/srvadmin/bin:/opt/slurm/current/bin
+++ [[ ! /gpfs/milgram/pi/turk-browne/projects/stat_episodic/ASHS/ashs_atlas_princeton/ashs_user_config.sh == /gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/bin/ashs_config.sh ]]
+++ source /gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/bin/ashs_config.sh
++++ ASHS_SIDES='left right'
++++ ASHS_MPRAGE_DENOISE=0
++++ ASHS_MPRAGE_SRUPSAMPLE=0
++++ ASHS_MPRAGE_SRUPSAMPLE_FACTOR='1 1 1'
++++ ASHS_TSE_DENOISE=0
++++ ASHS_TSE_SRUPSAMPLE=0
++++ ASHS_TSE_SRUPSAMPLE_FACTOR='1 1 1'
++++ ASHS_TSE_ISO_FACTOR=100x100x500%
++++ ASHS_TSE_ISO_REGION_CROP='20x20x0% 60x60x100%'
++++ ASHS_FLIRT_MULTIMODAL_OPTS='-searchrx -5 5 -searchry -5 5 -searchrz -5 5 -coarsesearch 3 -finesearch 1 -searchcost normmi'
++++ ASHS_CHUNK_AFFINE=0
++++ ASHS_SKIP_CHUNK_AFFINE=1
++++ ASHS_TEMPLATE_ITER=60x20x0
++++ ASHS_TEMPLATE_STAGES_TOTAL=4
++++ ASHS_TEMPLATE_STAGES_RIGID=1
++++ ASHS_TEMPLATE_ROI_DILATION=10x10x10vox
++++ ASHS_TEMPLATE_ROI_MARGIN=4x4x4vox
++++ ASHS_TEMPLATE_TARGET_RESOLUTION=0.4688x0.4688x0.4688mm
++++ ASHS_TEMPLATE_MASK_THRESHOLD=0.5
++++ ASHS_TARGET_ATLAS_FOR_HISTMATCH=0
++++ ASHS_HISTMATCH_CONTROLS=5
++++ ASHS_PAIRWISE_AFFINE_ITER=60x60x0
++++ ASHS_PAIRWISE_DEFORM_ITER=60x60x20
++++ ASHS_PAIRWISE_CROSSCORR_RADIUS=2x2x2
++++ ASHS_PAIRWISE_GREEDY_OPTIONS='-e 1.0 -s 2.0vox 0.6vox'
++++ ASHS_PAIRWISE_T1_WEIGHT=0.4
++++ ASHS_LABEL_SMOOTHING=0.24mm
++++ ASHS_MALF_STRATEGY='Joint[0.1,2]'
++++ ASHS_MALF_PATCHRAD=3x3x1
++++ ASHS_MALF_SEARCHRAD=3x3x1
++++ ASHS_MALF_PADDING=0x0x2
++++ ASHS_EC_DILATION=1
++++ ASHS_EC_TARGET_SAMPLES=100000
++++ ASHS_EC_DRYRUN_SAMPLE_RATE=0.01
++++ ASHS_EC_ITERATIONS=500
++++ ASHS_EC_PATCH_RADIUS=6x6x0
++++ ASHS_EC_MINIMUM_SAMPLES=100
++++ ASHS_EC_QSUB_EXTRA_OPTIONS=
+++ source /gpfs/milgram/pi/turk-browne/projects/stat_episodic/ASHS/ashs_atlas_princeton/ashs_user_config.sh
+++ ASHS_PAIRWISE_T1_WEIGHT=0.4
+++ ASHS_TEMPLATE_ITER=60x20x0
+++ [[ ! -n -e 1.0 -s 2.0vox 0.6vox ]]
+++ [[ -n '' ]]
+++ [[ -n '' ]]
+++ [[ /tmp/ashs.8udpchuT == '' ]]
++ cat
+Script: ashs_template_qsub.sh
+Root: /gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta
+Working directory: /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
+PATH: /gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin:/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/ants_1042:/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/fsl:/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin:/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/ants_1042:/gpfs/milgram/pi/turk-browne/shared_resources/packages/ashs-fastashs_beta/ext/Linux/bin/fsl:/gpfs/milgram/project/turk-browne/aa2842/conda_envs/myenv/bin:/gpfs/milgram/apps/hpc.rhel7/software/miniconda/23.11.0/condabin:/gpfs/milgram/apps/hpc.rhel7/software/miniconda/23.11.0:/gpfs/milgram/apps/hpc.rhel7/software/miniconda/23.11.0/sbin:/gpfs/milgram/apps/hpc.rhel7/software/miniconda/23.11.0/bin:/gpfs/milgram/apps/bin:/home/aa2842/.local/bin:/home/aa2842/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/dell/srvadmin/bin:/opt/slurm/current/bin
+  Skip Rigid: 
+  Skip Ants: 
++ WFSL=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1
++ WANT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp
++ WAFF=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template
++ mkdir -p /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1 /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template
++ TEMP_T1_FULL=/gpfs/milgram/pi/turk-browne/projects/stat_episodic/ASHS/ashs_atlas_princeton/template/template.nii.gz
++ TEMP_T1_MASK=/gpfs/milgram/pi/turk-browne/projects/stat_episodic/ASHS/ashs_atlas_princeton/template/template_bet_mask.nii.gz
++ ashs_subj_vars /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
++ local WORK=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
++ local WANT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp
++ local WAFF=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template
++ local WFSL=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1
++ SUBJ_RAWMPRAGE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage_raw.nii.gz
++ SUBJ_RAWTSE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse_raw.nii.gz
++ SUBJ_MPRAGE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage.nii.gz
++ SUBJ_TSE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse.nii.gz
++ SUBJ_AFF_T2T1_MAT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1/flirt_t2_to_t1.mat
++ SUBJ_AFF_T2T1_INVMAT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1/flirt_t2_to_t1_inv.mat
++ SUBJ_AFF_T1TEMP_MAT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine.mat
++ SUBJ_AFF_T1TEMP_INVMAT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine_inv.mat
++ SUBJ_T1TEMP_WARP=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_warp.nii.gz
++ SUBJ_T1TEMP_INVWARP=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_invwarp.nii.gz
++ SUBJ_T1TEMP_TRAN='/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_warp.nii.gz /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine.mat'
++ SUBJ_T1TEMP_INVTRAN='/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine_inv.mat /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_invwarp.nii.gz'
++ SUBJ_T2TEMP_TRAN='/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_warp.nii.gz /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine.mat /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1/flirt_t2_to_t1_inv.mat'
++ SUBJ_T2TEMP_INVTRAN='/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1/flirt_t2_to_t1.mat /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine_inv.mat /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_invwarp.nii.gz'
++ SUBJ_AFF_T1TEMP_RESLICE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine.nii.gz
++ [[ /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T1w_acpc_brain.nii.gz -nt /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage.nii.gz ]]
++ c3d /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T1w_acpc_brain.nii.gz -type short -o /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage_raw.nii.gz
++ SUBJ_MPRAGE_DENOISE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage_d.nii.gz
++ echo 'ASHS_MPRAGE_DENOISE = 0'
+ASHS_MPRAGE_DENOISE = 0
++ [[ 0 == 1 ]]
++ cp /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage_raw.nii.gz /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage_d.nii.gz
++ [[ 0 == 1 ]]
++ cp /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage_d.nii.gz /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage.nii.gz
++ rm -f /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage_d.nii.gz
++ [[ /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T2w_acpc_brain.nii.gz -nt /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse.nii.gz ]]
++ c3d /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/anat/T2w_acpc_brain.nii.gz -type short -o /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse_raw.nii.gz
++ SUBJ_TSE_DENOISE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse_d.nii.gz
++ [[ 0 == 1 ]]
++ cp /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse_raw.nii.gz /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse_d.nii.gz
++ [[ 0 == 1 ]]
++ cp /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse_d.nii.gz /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse.nii.gz
++ rm -f /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse_d.nii.gz
++ ashs_align_t1t2 /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
++ local ASHS_WORK=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
++ local OVERRIDE_MAT=
++ local OVERRIDE_MODE=
++ ashs_subj_vars /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
++ local WORK=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS
++ local WANT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp
++ local WAFF=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template
++ local WFSL=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1
++ SUBJ_RAWMPRAGE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage_raw.nii.gz
++ SUBJ_RAWTSE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse_raw.nii.gz
++ SUBJ_MPRAGE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage.nii.gz
++ SUBJ_TSE=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse.nii.gz
++ SUBJ_AFF_T2T1_MAT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1/flirt_t2_to_t1.mat
++ SUBJ_AFF_T2T1_INVMAT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1/flirt_t2_to_t1_inv.mat
++ SUBJ_AFF_T1TEMP_MAT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine.mat
++ SUBJ_AFF_T1TEMP_INVMAT=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine_inv.mat
++ SUBJ_T1TEMP_WARP=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_warp.nii.gz
++ SUBJ_T1TEMP_INVWARP=/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_invwarp.nii.gz
++ SUBJ_T1TEMP_TRAN='/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_warp.nii.gz /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine.mat'
++ SUBJ_T1TEMP_INVTRAN='/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine_inv.mat /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_invwarp.nii.gz'
++ SUBJ_T2TEMP_TRAN='/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_warp.nii.gz /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine.mat /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1/flirt_t2_to_t1_inv.mat'
++ SUBJ_T2TEMP_INVTRAN='/gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1/flirt_t2_to_t1.mat /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/affine_t1_to_template/t1_to_template_affine_inv.mat /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/ants_t1_to_temp/greedy_t1_to_template_invwarp.nii.gz'
++ [[ -f /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1/flirt_t2_to_t1.mat ]]
++ export FSLOUTPUTTYPE=NIFTI_GZ
++ FSLOUTPUTTYPE=NIFTI_GZ
++ c3d /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/tse.nii.gz -resample 100x100x500% -region 20x20x0% 60x60x100% -type short -o /tmp/ashs.8udpchuT/tse_iso.nii.gz
++ [[ -n '' ]]
++ local INIT_RIGID
++ [[ -n '' ]]
++ INIT_RIGID=-ia-identity
++ greedy -d 3 -a -dof 6 -m MI -n 100x100x10 -i /tmp/ashs.8udpchuT/tse_iso.nii.gz /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/mprage.nii.gz -ia-identity -o /gpfs/milgram/pi/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/flirt_t2_to_t1/flirt_t2_to_t1.mat
+Executing with the default number of threads: 48
+*************************************************
+  N=6   NUMBER OF CORRECTIONS=5       INITIAL VALUES F= -7602.88   GNORM= 28.2822
+*************************************************
+   I   NFN    FUNC        GNORM       STEPLENGTH
+   1    3     -7608.786      14.970       0.014
+   2    4     -7610.988      11.363       1.000
+   3    5     -7616.755       5.736       1.000
+   4    6     -7617.264      13.986       1.000
+   5    7     -7618.482       3.548       1.000
+   6    8     -7618.630       0.614       1.000
+   7    9     -7618.635       0.405       1.000
+   8   11     -7618.642       0.454       0.340
+   9   14     -7618.652       0.659       1.468
+  10   15     -7618.652       0.629       1.000
+  11   16     -7618.653       0.510       1.000
+  12   18     -7618.655       0.275       0.483
+  13   19     -7618.656       0.334       1.000
+  14   20     -7618.656       0.176       1.000
+  15   21     -7618.656       0.122       1.000
+  16   23     -7618.656       0.181       0.299
+  17   26     -7618.657       0.245       0.767
+  18   28     -7618.657       0.106       0.363
+  19   29     -7618.657       0.087       1.000
+  20   31     -7618.657       0.081       0.236
+  21   32     -7618.657       0.074       1.000
+  22   33     -7618.657       0.045       1.000
+  23   34     -7618.657       0.061       1.000
+  24   37     -7618.657       0.056       2.759
+  25   39     -7618.657       0.046       0.073
+  26   43     -7618.657       0.047       0.132
+  27   45     -7618.657       0.033       0.361
+  28   46     -7618.657       0.019       1.000
+  29   47     -7618.657       0.020       1.000
+  30   50     -7618.657       0.044       0.050
+  31   53     -7618.657       0.044       1.837
+  32   56     -7618.657       0.029       0.055
+  33   57     -7618.657       0.037       1.000
+  34   61     -7618.657       0.038       0.104
+  35   65     -7618.657       0.032       0.002
+ IFLAG= -1  LINE SEARCH FAILED. SEE DOCUMENTATION OF ROUTINE MCSRCH ERROR RETURN OF LINE SEARCH: INFO= 3 POSSIBLE CAUSES: FUNCTION OR GRADIENT ARE INCORRECT OR INCORRECT TOLERANCESvnl_lbfgs: Error. Netlib routine lbfgs failed.
+END OF LEVEL   0
+Level   0  LastIter   Metrics  -7618.656736  Energy = -7618.656736

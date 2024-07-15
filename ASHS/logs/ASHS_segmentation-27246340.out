@@ -1,0 +1,3 @@
+segmenting mprage
+/var/spool/slurmd/job27246340/slurm_script: line 39: /gpfs/milgram/project/turk-browne/aa2842/multisensory/logs/step5A_roi_segment_ASHS_2024-07-12_17:21:02.txt: No such file or directory
+mkdir: cannot create directory ‘/gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks’: No such file or directory
