@@ -23,7 +23,8 @@ MASK_DIR_T2="$FINAL_DIR/bin_masks_5B_T2"
 MASK_DIR_T1="$FINAL_DIR/bin_masks_5B_T1"
 
 # Paths for the T1 and T2 scans
-T1_PATH="$ANAT_DIR/ENTER/PATH/TO/T1/SCAN/HERE"
+T1_PATH="$ANAT_DIR/T1w_acpc_brain.nii.gz"
+T2_PATH="$ANAT_DIR/T2w_acpc_brain.nii.gz"
 
 # Paths to the segmentation mask files
 LEFT_SEG_PATH="$HPC_DIR/${sub}_left_lfseg_corr_nogray.nii.gz"
@@ -62,33 +63,22 @@ fslmaths $MASK_DIR_T2/left_CA1_mask_T2.nii.gz -add $MASK_DIR_T2/left_CA2+3_mask_
 segmentations+=("/left_HPC_mask")
 
 # Create a combined mask for the right hippocampus
-fslmaths $MASK_DIR_T2/right_CA1_mask_T2.nii.gz -add $MASK_DIR_T2/right_CA2+3_mask_T2.nii.gz -add $MASK_DIR_T2/right_DG_mask_T2.nii.gz -add $MASK_DIR_T2/right_Subiculum_mask_T2.nii.gz -bin $MASK_DIR_T2/right_HPC_mask_T2.nii.gz
+fslmaths "$MASK_DIR_T2/right_CA1_mask_T2.nii.gz" -add "$MASK_DIR_T2/right_CA2+3_mask_T2.nii.gz" -add "$MASK_DIR_T2/right_DG_mask_T2.nii.gz" -add "$MASK_DIR_T2/right_Subiculum_mask_T2.nii.gz" -bin "$MASK_DIR_T2/right_HPC_mask_T2.nii.gz"
 segmentations+=("/right_HPC_mask")
 
 # Create a combined mask for the whole hippocampus
-fslmaths $MASK_DIR_T2/left_HPC_mask_T2.nii.gz -add $MASK_DIR_T2/right_HPC_mask_T2.nii.gz -bin $MASK_DIR_T2/combined_HPC_mask_T2.nii.gz
+fslmaths "$MASK_DIR_T2/left_HPC_mask_T2.nii.gz" -add "$MASK_DIR_T2/right_HPC_mask_T2.nii.gz" -bin "$MASK_DIR_T2/combined_HPC_mask_T2.nii.gz"
 segmentations+=("/combined_HPC_mask")
 
 ######################################################################################################################################
 ######################################################################################################################################
 
 # NOW WE ARE BUILDING SEGMENTATIONS IN T1 SPACE (TRANSFORMATION OF ASHS OUTPUT FROM T2 TO T1 USING FLIRT)
-echo "finding parameters for T2 to T1 transformation"
+echo "finding matrix for T2 to T1 transformation"
 
-# Extract the transformation matrix from the ITK .txt file
-transform_mat_T2_to_T1_xfm="/ENTER/PATH/TO/TRANSFORMATION/HERE"
-transform_mat_T2_to_T1="/ENTER/THIS/IS/RENAMED/TRANSFORMATION/MATRIX/IN/MAT/FORMAT/DECIDE/WHERE/TO/PLACE/IT"
-parameters=$(grep "Parameters:" "$transform_mat_T2_to_T1_xfm" | sed 's/Parameters: //')
+transform_mat_T2_to_T1="$ANAT_DIR/t2_to_t1"
 
-# Create the .mat file and write the matrix
-cat << EOF > "$transform_mat_T2_to_T1"
-$(echo "$parameters" | awk '{print $1, $2, $3, $4}')
-$(echo "$parameters" | awk '{print $5, $6, $7, $8}')
-$(echo "$parameters" | awk '{print $9, $10, $11, $12}')
-0 0 0 1
-EOF
-
-echo "Converted $transform_mat_T2_to_T1_xfm to $transform_mat_T2_to_T1"
+flirt -in "$T2_PATH" -ref "$T1_PATH" -dof 6 -cost mutualinfo -omat "$transform_mat_T2_to_T1.mat" -out "$transform_mat_T2_to_T1.nii.gz"
 
 for seg in "${segmentations[@]}"; do
   # Declare the paths for each segmentation and the names of outputs
@@ -97,7 +87,7 @@ for seg in "${segmentations[@]}"; do
   bin_out_name=$MASK_DIR_T1/${seg}_T1.nii.gz
 
   # Use flirt to do the T2 to T1 transformation
-  flirt -in "$in_name" -ref "$T1_PATH" -out "$out_name" -init $transform_mat_T2_to_T1 -applyxfm -interp nearestneighbour
+  flirt -in "$in_name" -ref "$T1_PATH" -out "$out_name" -init "$transform_mat_T2_to_T1.mat" -applyxfm -interp nearestneighbour
   # Use FSL to binarize the realigned mask
   fslmaths "$out_name" -thr 0.5 -bin "$bin_out_name"
 done
@@ -106,4 +96,4 @@ done
 ######################################################################################################################################
 
 # Delete any temporary files generated
-rm -rf $FINAL_DIR/*_temp.nii.gz
+# rm -rf $FINAL_DIR/*_temp.nii.gz
