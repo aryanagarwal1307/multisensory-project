@@ -12,6 +12,8 @@ sub="multimem001"
 
 # Get the important variables
 source /gpfs/milgram/project/turk-browne/aa2842/multisensory/ASHS/globals.sh
+source $FSLDIR/etc/fslconf/fsl.sh
+module load FSL
 SUBJ_DIR="$SUBJ_HEAD_DIR/$sub"
 ANAT_DIR="$SUBJ_DIR/anat"
 

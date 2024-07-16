@@ -61,7 +61,7 @@ for region in "${!regions[@]}"; do
 done
 
 # Create a combined mask for the left hippocampus
-fslmaths $MASK_DIR_T2/left_CA1_mask_T2.nii.gz -add $MASK_DIR_T2/left_CA2+3_mask_T2.nii.gz -add $MASK_DIR_T2/left_DG_mask_T2.nii.gz -add $MASK_DIR_T2/left_Subiculum_mask_T2.nii.gz -bin $MASK_DIR_T2/left_HPC_mask_T2.nii.gz
+fslmaths "$MASK_DIR_T2/left_CA1_mask_T2.nii.gz" -add "$MASK_DIR_T2/left_CA2+3_mask_T2.nii.gz" -add "$MASK_DIR_T2/left_DG_mask_T2.nii.gz" -add "$MASK_DIR_T2/left_Subiculum_mask_T2.nii.gz" -bin "$MASK_DIR_T2/left_HPC_mask_T2.nii.gz"
 segmentations+=("/left_HPC_mask")
 
 # Create a combined mask for the right hippocampus
