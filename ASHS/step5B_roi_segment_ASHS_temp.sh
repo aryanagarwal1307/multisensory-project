@@ -56,7 +56,7 @@ for region in "${!regions[@]}"; do
   fslmaths "$RIGHT_SEG_PATH" -thr "$code" -uthr "$code" -bin "$MASK_DIR_T2/right_${region}_mask_T2.nii.gz"
   segmentations+=("right_${region}_mask")
   # Make the combined mask for ROI
-  fslmaths "$MASK_DIR_T2/left_${region}_mask.nii.gz" -add "$MASK_DIR_T2/right_${region}_mask.nii.gz" -bin "$MASK_DIR_T2/combined_${region}_mask_T2.nii.gz"
+  fslmaths "$MASK_DIR_T2/left_${region}_mask_T2.nii.gz" -add "$MASK_DIR_T2/right_${region}_mask_T2.nii.gz" -bin "$MASK_DIR_T2/combined_${region}_mask_T2.nii.gz"
   segmentations+=("combined_${region}_mask")
 done
 
