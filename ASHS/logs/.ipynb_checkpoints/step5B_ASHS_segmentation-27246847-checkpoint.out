@@ -1,0 +1,30 @@
+To start using FSL, first run 'source $FSLDIR/etc/fslconf/fsl.sh'
+Image Exception : #63 :: No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_CA1_mask
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_CA1_mask
+/var/spool/slurmd/job27246847/slurm_script: line 50: 710250 Aborted                 (core dumped) fslmaths $MASK_DIR_T2/left_${region}_mask.nii.gz -add $MASK_DIR_T2/right_${region}_mask.nii.gz -bin $MASK_DIR_T2/combined_${region}_mask_T2.nii.gz
+Image Exception : #63 :: No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_CA2+3_mask
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_CA2+3_mask
+/var/spool/slurmd/job27246847/slurm_script: line 50: 710262 Aborted                 (core dumped) fslmaths $MASK_DIR_T2/left_${region}_mask.nii.gz -add $MASK_DIR_T2/right_${region}_mask.nii.gz -bin $MASK_DIR_T2/combined_${region}_mask_T2.nii.gz
+Image Exception : #63 :: No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_Subiculum_mask
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_Subiculum_mask
+/var/spool/slurmd/job27246847/slurm_script: line 50: 710275 Aborted                 (core dumped) fslmaths $MASK_DIR_T2/left_${region}_mask.nii.gz -add $MASK_DIR_T2/right_${region}_mask.nii.gz -bin $MASK_DIR_T2/combined_${region}_mask_T2.nii.gz
+Image Exception : #63 :: No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_PRC_mask
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_PRC_mask
+/var/spool/slurmd/job27246847/slurm_script: line 50: 710285 Aborted                 (core dumped) fslmaths $MASK_DIR_T2/left_${region}_mask.nii.gz -add $MASK_DIR_T2/right_${region}_mask.nii.gz -bin $MASK_DIR_T2/combined_${region}_mask_T2.nii.gz
+Image Exception : #63 :: No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_DG_mask
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_DG_mask
+/var/spool/slurmd/job27246847/slurm_script: line 50: 710295 Aborted                 (core dumped) fslmaths $MASK_DIR_T2/left_${region}_mask.nii.gz -add $MASK_DIR_T2/right_${region}_mask.nii.gz -bin $MASK_DIR_T2/combined_${region}_mask_T2.nii.gz
+Image Exception : #63 :: No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_EC_mask
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_EC_mask
+/var/spool/slurmd/job27246847/slurm_script: line 50: 710309 Aborted                 (core dumped) fslmaths $MASK_DIR_T2/left_${region}_mask.nii.gz -add $MASK_DIR_T2/right_${region}_mask.nii.gz -bin $MASK_DIR_T2/combined_${region}_mask_T2.nii.gz
+Image Exception : #63 :: No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_PHC_mask
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  No image files match: /gpfs/milgram/project/turk-browne/aa2842/ASHS_data/subjects/multimem001/rois/ASHS/final/func_masks/bin_masks_5B_T2/left_PHC_mask
+/var/spool/slurmd/job27246847/slurm_script: line 50: 710319 Aborted                 (core dumped) fslmaths $MASK_DIR_T2/left_${region}_mask.nii.gz -add $MASK_DIR_T2/right_${region}_mask.nii.gz -bin $MASK_DIR_T2/combined_${region}_mask_T2.nii.gz
+finding matrix for T2 to T1 transformation
