@@ -31,4 +31,4 @@ echo $SUB $ROOT $OUT
 
 # This is the command that runs fmriprep. Specify the directories, 'participant' level processing, and templates for spatial normalization (e.g. MNI152).
 
-fmriprep $ROOT $OUT participant --participant-label $SUB --nthreads 16 -w $WORK --output-spaces MNI152Lin --ignore slicetiming --fs-license-file /home/aa2842/project/license.txt
+fmriprep $ROOT $OUT participant --participant-label $SUB --nthreads 16 -w $WORK --output-spaces MNI152Lin anat --ignore slicetiming --fs-license-file /home/aa2842/project/license.txt
