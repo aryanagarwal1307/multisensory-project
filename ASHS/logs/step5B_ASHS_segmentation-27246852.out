@@ -1,0 +1,2 @@
+To start using FSL, first run 'source $FSLDIR/etc/fslconf/fsl.sh'
+finding matrix for T2 to T1 transformation

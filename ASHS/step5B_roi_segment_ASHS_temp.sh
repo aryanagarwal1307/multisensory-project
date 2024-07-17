@@ -10,14 +10,14 @@
 
 sub="multimem001"
 
-# Get the important variables
+# Get the important variables and load FSL from the cluster
 source /gpfs/milgram/project/turk-browne/aa2842/multisensory/ASHS/globals.sh
 source "$FSLDIR/etc/fslconf/fsl.sh"
 module load FSL
-SUBJ_DIR="$SUBJ_HEAD_DIR/$sub"
+SUBJ_DIR="$DATA_DIR/$sub"
 ANAT_DIR="$SUBJ_DIR/anat"
 
-# Main directories for the variables
+# Main directories for the variables, where MASK_DIRs are to store the T2 and T1 masks 
 ROI_DIR="$SUBJ_DIR/rois/ASHS"
 HPC_DIR="$ROI_DIR/final"
 FINAL_DIR="$HPC_DIR/func_masks"
@@ -28,15 +28,15 @@ MASK_DIR_T1="$FINAL_DIR/bin_masks_5B_T1"
 T1_PATH="$ANAT_DIR/T1w_acpc_brain.nii.gz"
 T2_PATH="$ANAT_DIR/T2w_acpc_brain.nii.gz"
 
-# Paths to the segmentation mask files
+# Paths to the segmentation mask files generetaed by ASHS 
 LEFT_SEG_PATH="$HPC_DIR/${sub}_left_lfseg_corr_nogray.nii.gz"
 RIGHT_SEG_PATH="$HPC_DIR/${sub}_right_lfseg_corr_nogray.nii.gz"
 
-# Create the directories if they don't exist
+# Create the directories since they don't exist yet
 mkdir -p "$MASK_DIR_T2"
 mkdir -p "$MASK_DIR_T1"
 
-# Define the region codes and segmentation list
+# Define the region codes in the file and the segmentation array for loops 
 declare -A regions
 regions=( ["CA1"]=1 ["CA2+3"]=2 ["DG"]=3 ["EC"]=4 ["PHC"]=5 ["PRC"]=6 ["Subiculum"]=7 )
 segmentations=()
@@ -96,6 +96,3 @@ done
 
 ######################################################################################################################################
 ######################################################################################################################################
-
-# Delete any temporary files generated
-# rm -rf $FINAL_DIR/*_temp.nii.gz

@@ -11,16 +11,15 @@
 sub="multimem001"
 
 source /gpfs/milgram/project/turk-browne/aa2842/multisensory/ASHS/globals.sh
-SUBJ_DIR="$SUBJ_HEAD_DIR/$sub"
+SUBJ_DIR="$DATA_DIR/$sub"
 ANAT_DIR="$SUBJ_DIR/anat"
-ANALYSIS_DIR="$SUBJ_DIR/preproc/per_run/${sub}_scene1.feat"
 ROI_DIR="$SUBJ_DIR/rois/ASHS"
 
 if [ ! -d $ROI_DIR ]; then
         mkdir $ROI_DIR
 fi
 
-echo "segmenting mprage"
+echo "segmenting T2 scan"
 
 # run ASHS segmentation
 # `-I` participant Id (This ID gets propagated throughout the pipeline)
