@@ -1,0 +1,13 @@
+{
+    "Name": "multisensory-memory",
+    "BIDSVersion": "1.10.0",
+    "DatasetType": "raw",
+    "License": "PD",
+    "Authors": [
+        "Omri Raccah",
+        "Yannan Zhu",
+        "Aryan Agarwal",
+        "Nicholas Turk-Browne"
+    ],
+    "GeneratedBy": "something"
+}
